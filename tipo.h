@@ -10,6 +10,12 @@ namespace MiniOlc {
         ARRAY,
         NULO
     };
+
+    struct Retorno {
+        Tipo tipo;
+        void* valor;
+    };
+
 }
 
 #endif // TIPO_H

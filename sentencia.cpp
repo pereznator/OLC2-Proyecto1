@@ -1,13 +1,15 @@
 #include "sentencia.h"
-#include "ast.h"
 
 namespace MiniOlc {
-Sentencia::Sentencia(){}
-Sentencia::Sentencia(Expresion *_expresion) {
-    this->expresion = _expresion;
+Sentencia::Sentencia() {
+
 }
 
 void Sentencia::ejecutar(){
-    AST::getAST()->salida += "El resultado es: " + std::to_string(this->expresion->evaluar()) + "\n";
+    /*MiniOlc::Retorno retorno = this->expresion->ejecutar(entorno);
+    int valorInt = *(int*)retorno.valor;
+    std::string valorStr = std::to_string(valorInt);
+    AST::getAST()->salida += "El resultado es: " + valorStr + "\n";*/
+
 }
 }

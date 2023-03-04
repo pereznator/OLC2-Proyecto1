@@ -2,17 +2,16 @@
 #define EXPRESION_H
 
 #include <string>
+#include "tipo.h"
+#include "ast.h"
 
 namespace MiniOlc {
 class Expresion {
     public:
         Expresion();
-        Expresion(Expresion *_operandoIzquierda, Expresion *_operandoDerecha, char _operador);
-        Expresion *operandoIzquierda;
-        Expresion *operandoDerecha;
-        char operador;
-        std::string valor;
-        int evaluar();
+        Expresion(int _linea, int _columna);
+        int linea, columna;
+        virtual Retorno ejecutar(MiniOlc::AST *entorno);
 };
 }
 

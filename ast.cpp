@@ -1,6 +1,6 @@
 
-#include "ast.h"
 #include "sentencia.h"
+#include "ast.h"
 #include <QList>
 
 
